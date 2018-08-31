@@ -7,7 +7,6 @@ let messageArray;
 let command;
 let verification;
 let username;
-var userlist = []; 
 
 //mysql
 var pool = mysql.createPool({
@@ -54,6 +53,8 @@ client.on('message', message =>
 
 		if (command === `${config_new.prefix}key`)
 		{
+			client.channels.get(466627577344163842).send(username + " Asked for a key!");
+
 			let discordNameSQL = "SELECT * FROM steam_keys WHERE discord_username = \"" + username + "\" LIMIT 1";
 			
 			pool.getConnection(function (error, tempConnection)

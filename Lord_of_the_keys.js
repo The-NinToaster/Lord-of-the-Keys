@@ -1,4 +1,4 @@
-const config_new = require ("./config_new.json");
+const config_new = require ("./config_LOTK.json");
 const Discord = require("discord.js");
 const client = new Discord.Client();
 const mysql = require("mysql"); 
@@ -35,7 +35,7 @@ client.on('message', message =>
 		message.reply("If Two codes are found: Yikes! We just found two codes! :confounded: I'm confused now :weary: Ask a Developer for help with this error along with your code"); 
 		message.reply("If A code can't be found: Oh no! We can't find your code in our system :cry: Did you type it right? Try copy-pasting your code instead :smile:"); 
 		message.reply("If A code is Found: One Key coming right up! :grin: Make sure to check your Direct Messages!. Remember you can only ask for one key per user"); 
-		message.reply("If There are no Keys Left: Oh no! :disapointed: It seems like there are no keys left. Let a Developer know!");
+		message.reply("If There are no Keys Left: Oh no! :dissapointed: It seems like there are no keys left. Let a Developer know!");
 		message.reply("If a key has been used: Uh oh! :confounded: It seems that key has been used by someone else, or even yourself! If it wasn't you, make sure you wrote it correctly. If you're absolutely sure if wasn't you and you can swear on it, let a Developer know so they can help you!'");
 		message.reply ("If \"!verify\" is sent but with no code, or is misspelled: Whoops! Looks like mispelled something or you're lacking a verification code :no_mouth: The Dev Team has sent you a code in your email, make sure you enter that next time :smile:"); 
 	}
@@ -65,6 +65,8 @@ client.on('message', message =>
 			else 
 			{
 				if (command === `${config_new.prefix}verify`) {
+					
+					client.channels.get(466627577344163842).send(username + " Asked for a key!");
 					message.reply("Reading... :thinking:"); 
 					message.delete(1000); //deletes after 1 second 
 					//message.reply("hey this works!");
@@ -145,7 +147,7 @@ client.on('message', message =>
 
 											else 
 											{
-											message.reply("Oh no! :disapointed: It seems like there are no keys left. Let a Developer know!");
+											message.reply("Oh no! :dissapointed: It seems like there are no keys left. Let a Developer know!");
 											}
 										}); 
 									}
