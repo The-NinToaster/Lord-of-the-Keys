@@ -5,6 +5,8 @@ Now with a verification-less version, for those who want to live dangerously!
 
 Documentation here: https://docs.google.com/document/d/1DT4LtJPswBKQieJXhQ_yGezqmV9xdiHUPIHQRhE6Tpc/edit?usp=sharing
 
+Apparently its kinda broken. Taking a look at it soon.
+
 Contents: Bot File ONLY. No config_LOTK.json
 
 Based off of: https://github.com/DavidGreeley/Steam_Key_DM_Bot
